@@ -5,12 +5,12 @@
       = link_to "foregin diary", root_path, class: "header-diary" 
 
 
-  -# .grid
-
-  -#   .grid__wrapper
-  -#     = link_to "マイページ", mypages_path, class: "grid"
-  -#     = link_to "ログアウト",  destroy_user_session_path, method: :delete
-
-  -#   .grid__wrapper
-  -#     = link_to "ログイン", new_user_session_path, class: 'post'
-  -#     = link_to "新規登録", new_user_registration_path, class: 'post'
+  .grid
+    -if user_signed_in?
+      .grid__wrapper
+        = link_to "マイページ", user_path(current_user.id), method: :get
+        = link_to "ログアウト",  destroy_user_session_path, method: :delete
+    -else
+      .grid__wrapper
+        = link_to "ログイン", new_user_session_path, class: 'post'
+        = link_to "新規登録", new_user_registration_path, class: 'post'

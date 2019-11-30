@@ -21,6 +21,7 @@ body {
     padding-right: 20px;
     height: 70px;
     a {
+      text-decoration: none;
       display: block;
       margin-left: 20px;
       color: white;
@@ -46,6 +47,7 @@ body {
       display: block;
       margin-top: 12px;
       color: white;
+      text-decoration: none;
     }
     &__icon {
       padding: 25px 20px;
@@ -65,7 +67,7 @@ body {
   display: flex;
   flex-wrap:wrap;
   padding: 30px 100px;
-  width: 1000px;
+  width: 1150px;
   height: 100%;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8D32NVjJ8-vC-weN7fhitk6QdBoBTTWKmiL_NcTMxy1PEvvOD&s');
   &__databox {
@@ -74,6 +76,12 @@ body {
     margin: 20px 10px;
     background-color: white;
     border: thick double #32a1ce;
+    .fa {
+      display: block;
+      width: 30px;
+      height: 30px;
+      color:  #32a1ce;
+    }
     &__icon {
       display: block;
       width: 50px;
@@ -87,7 +95,7 @@ body {
     &__btn {
       display: block;
       text-decoration: none;
-      padding: 50px 60px;
+      padding: 50px 35px;
       color: blue;
       width: 50%;
       border: 4mm ridge rgba(170, 50, 220, .6);

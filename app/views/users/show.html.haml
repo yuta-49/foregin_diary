@@ -1,0 +1,10 @@
+= render "messages/header"
+
+.mypages-container
+  .mypages-subtitle
+    = @nickname
+  %h1.hero__title
+    = current_user.id
+  .home-come
+    = link_to "ホームの戻る",root_path, class: "home-come"
+  
