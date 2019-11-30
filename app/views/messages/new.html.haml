@@ -15,7 +15,7 @@
       %button#removeDataset Remove Dataset
 
   .formbox
-    = form_with model: Message.new, method: :post, local:true do |f|
+    = form_with model: @message, method: :post, local:true do |f|
       .formbox-form
         %label.form 月を選択してください：
           

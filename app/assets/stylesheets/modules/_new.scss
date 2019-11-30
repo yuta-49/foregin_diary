@@ -20,15 +20,17 @@
       font-weight: bold;
       .form {
         display: block;
-        height:20px;
+        height: 20px;
         width: 300px;
+        margin-bottom: 20px;
+        margin-top: 20px;
       }
     }
     &__submit {
       background-color: #00CCFF;
       color: white;
       border-style: inset;
-
+      margin-top: 20px;
       height: 50px;
       width: 50px;
     }

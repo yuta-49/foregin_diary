@@ -94,3 +94,25 @@ body {
     }
   }
 }
+
+// new.html.haml
+.data-wrapper {
+  height: 100%;
+  width: 1000px;
+  background-image: url("https://image.freepik.com/free-vector/_72857-58.jpg");
+  .container {
+    float: left;
+    min-width: 400px;
+  }
+  .formbox {
+    height: 400px;
+    width: 432px;
+    background-color: white;
+    float: right;
+    display: block;
+    border: solid;
+    z-index: 1px;
+    font-size: 15px;
+    padding-top: 15px;
+  }
+}
