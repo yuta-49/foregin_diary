@@ -1,0 +1,15 @@
+%head
+  %script{:src => "https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"}
+  %script{:src => "https://cdn.jsdelivr.net/npm/chart.js@2.8.0"}
+  %script{:src => "https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@1.8.0"}
+
+= render "header"
+
+.data-wrapper
+  .container
+    .chartbox
+      %canvas#myChart
+    %p
+      %button#randomizeData Randomize Data
+      %button#addDataset Add Dataset
+      %button#removeDataset Remove Dataset
