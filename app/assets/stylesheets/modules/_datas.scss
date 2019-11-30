@@ -1,3 +1,110 @@
 // Place all the styles related to the datas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+img {
+  vertical-align: middle;
+}
+
+ol, ul {
+list-style: none;
+text-decoration: none;
+}
+  
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+  
+*, ::before, ::after {
+box-sizing: border-box;
+}
+  
+element.style {
+box-sizing: border-box;
+display: block;
+height: 100%;
+margin: 0px;
+-moz-box-sizing: border-box;
+-ms-transform: translate(0, 0);
+overflow: hidden;
+padding: 0;
+position: relative;
+touch-action: pinch-zoom pan-y;
+transform: translate3d(0, 0, 0);
+-webkit-transform: translate3d(0, 0, 0);
+}
+  
+element.style {
+visibility: visible;
+transition: all 0.5s ease 0s;
+opacity: 1;
+}
+  
+.message-header {
+  border-bottom: 90px solid #da2020; 
+  height: 50px;
+  width: 100%; 
+}
+
+  
+.message-wrapper {
+  height: 100vh;
+  width: 100%;
+  .message-box {
+    .sliders {
+      height: 700px;
+      width: 1000px;
+      margin: 0 auto;
+      .slider-add {
+        height: 700px;
+        background-image: url("https://d1f5hsy4d47upe.cloudfront.net/6c/6cbae6a516907b8f70831aa8c51edfec_t.jpeg");
+      }
+      .slider-leave {
+        height: 700px;
+        background-image: url("https://s3-ap-northeast-1.amazonaws.com/static.amanaimages.com/imgroom/rf_preview640/10179/10179015485.jpg");
+      }
+      .slider-three {
+        height: 700px;
+        background-image: url("https://i-ogp.pximg.net/c/1050x550_80_a2_g2/img-master/img/2012/01/28/00/02/56/24648275_p0_master1200.jpg");
+      }
+    }
+  }
+}
+
+.message-show {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  .show-container {
+    width:950px;
+    height: 1000px;
+    margin: 0 auto;
+    background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/a/amesuke/20080821/20080821210639.jpg");
+    padding: 20px;
+  }
+}
+
+.message-group {
+  width: 700px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  padding: 20px;
+  .message-month {
+    height: 50px;
+    width: 50px;
+    font-size: 15px;
+  }
+  .message-text {
+    height: 150px;
+    width: 500px;
+    font-size: 15px;
+    .message-good {
+      margin-bottom: 10px;
+    }
+    .message-bad {
+      margin-bottom: 10px;
+    }
+  }
+}
