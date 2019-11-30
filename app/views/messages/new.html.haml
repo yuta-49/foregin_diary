@@ -1,0 +1,30 @@
+%head
+  %script{:src => "https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"}
+  %script{:src => "https://cdn.jsdelivr.net/npm/chart.js@2.8.0"}
+  %script{:src => "https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@1.8.0"}
+
+= render "header"
+
+.data-wrapper
+  .container
+    .chartbox
+      %canvas#myChart
+    %p
+      %button#randomizeData Randomize Data
+      %button#addDataset Add Dataset
+      %button#removeDataset Remove Dataset
+
+  .formbox
+    = form_with model: @message, method: :post, local:true do |f|
+      .formbox-form
+        %label.form 月を選択してください：
+          
+        %label.form 日付を選択してください：
+
+        %label.form よかった点：
+        = f.text_field  :good, {:placeholder => "入力してください"} 
+        %label.form 悪かった点：
+        = f.text_field  :bad, {:placeholder => "入力してください"}
+        %label.form 改善点：
+        = f.text_field  :improvement, {:placeholder => "入力してください"}
+      = f.submit "送信", {class: "formbox__submit"} 

@@ -1,0 +1,38 @@
+.data-wrapper {
+  height: 1500px;
+  width: 1000px;
+  background-image: url("https://image.freepik.com/free-vector/_72857-58.jpg");
+  margin: 0 auto;
+  padding: 0 30px;
+  .container {
+    width: 850px;
+  }
+  .formbox {
+    height: 600px;
+    width: 910px;
+    background-color: white;
+    border: solid;
+    z-index: 1px;
+    font-size: 15px;
+    margin: 20px 10px;
+    padding: 20px;
+    .formbox-form {
+      font-weight: bold;
+      .form {
+        display: block;
+        height: 20px;
+        width: 300px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+    &__submit {
+      background-color: #00CCFF;
+      color: white;
+      border-style: inset;
+      margin-top: 20px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}

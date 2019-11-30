@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
+gem 'chartkick', '~> 3.2', '>= 3.2.1'
+gem 'jquery-rails'
