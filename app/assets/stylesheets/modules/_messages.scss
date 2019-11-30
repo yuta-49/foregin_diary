@@ -1,0 +1,96 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.body {
+  height: 100%;
+  background-image: url("https://www.pakutaso.com/shared/img/thumb/peiz_DSC00255_TP_V.jpg");
+}
+
+.wrapper {
+  box-sizing: border-box;
+  background-image: url('https://cdn.pixabay.com/photo/2016/11/23/15/23/cosmos-1853491_1280.jpg');
+}
+
+.grid{
+  display: flex;
+  &__wrapper {
+    display: flex;
+    margin-top: 30px;
+    padding-right: 20px;
+    height: 70px;
+    a {
+      display: block;
+      margin-left: 20px;
+      color: white;
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  background-color :#55c500;
+  height: 80px;
+  display: flex;
+  color: white;
+  a {
+
+    display: block;
+  }
+  &__wrapper {
+    flex:1;
+    display: flex;
+    color: white;
+    .header-diary {
+      display: block;
+      margin-top: 12px;
+      color: white;
+    }
+    &__icon {
+      padding: 25px 20px;
+    }
+  } 
+  &__btn {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px 40px;
+    text-decoration: none; 
+  }
+}
+.data {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap:wrap;
+  padding: 30px 100px;
+  width: 1000px;
+  height: 100%;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8D32NVjJ8-vC-weN7fhitk6QdBoBTTWKmiL_NcTMxy1PEvvOD&s');
+  &__databox {
+    width: 290px;
+    height: 290px;
+    margin: 20px 10px;
+    background-color: white;
+    border: thick double #32a1ce;
+    &__icon {
+      display: block;
+      width: 50px;
+      height: 50px;
+      &--pen-square {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &__btn {
+      display: block;
+      text-decoration: none;
+      padding: 50px 60px;
+      color: blue;
+      width: 50%;
+      border: 4mm ridge rgba(170, 50, 220, .6);
+    }
+  }
+}
