@@ -1,10 +1,23 @@
 = render "messages/header"
 
-.mypages-container
-  .mypages-subtitle
-    = @nickname
-  %h1.mypages-title
-    = @message
-  .home-come
-    = link_to "ホームの戻る",root_path, class: "home-come"
+.mypages
+  .mypages-container
+    .mypages-subtitle
+      = @nickname
+    -@user.messages.each do |message|
+      .mypages-box
+        .mypages-image
+        %ul.mypages-year
+          %li.mypages-day 
+            = message.day.name
+          %li.mypages-month
+            = message.month.name
+        .mypages-title-good
+          = message.good
+        .mypages-title-good
+          = message.bad
+        .mypages-title-good
+          = message.improvement
+    .home-come
+      = link_to "ホームに戻る",root_path, class: "home-come"
   

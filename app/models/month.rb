@@ -1,3 +1,4 @@
 class Month < ApplicationRecord
-  belongs_to :message
+  has_many :message
+  belongs_to :user
 end

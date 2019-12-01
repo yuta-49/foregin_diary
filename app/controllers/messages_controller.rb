@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   
   before_action :move_to_index,  :except => :index
   def index
-    @messages = Message.all
+    @messages = Message.all.includes(:user).order("created_at DESC")
   end
 
   def  new
@@ -21,13 +21,12 @@ class MessagesController < ApplicationController
 
 
   private
-
   def message_params 
-    params.require(:message).permit(:user_id, :good, :bad, :improvement, :month_id)
+    params.require(:message).permit(:user_id, :good, :bad, :improvement, :month_id, :day_id)
   end
   
   def new_params
-    params.require(:message).permit(:good, :bad, :improvement, :month_id).merge(user_id: current_user.id)
+    params.require(:message).permit(:good, :bad, :improvement, :month_id, :day_id).merge(user_id: current_user.id)
   end
 
   def move_to_index

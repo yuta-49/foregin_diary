@@ -1,5 +1,5 @@
 .data-wrapper {
-  height: 1100px;
+  height: 1200px;
   width: 1000px;
   background-color: #111111;
   margin: 0 auto;
@@ -8,7 +8,7 @@
     width: 850px;
   }
   .formbox {
-    height: 600px;
+    height: 650px;
     width: 910px;
     background-color: white;
     border: solid;
@@ -18,6 +18,10 @@
     padding: 20px;
     .formbox-form {
       font-weight: bold;
+        input {
+          width: 800px;
+          height: 50px;
+        }
       .form {
         display: block;
         height: 20px;
@@ -33,7 +37,8 @@
       border-style: inset;
       margin-top: 20px;
       height: 50px;
-      width: 50px;
+      width: 200px;
+      margin: 20px auto;
     }
   }
 }
