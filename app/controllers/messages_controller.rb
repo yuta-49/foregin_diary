@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
   end
   
   def new_params
-    params.require(:message).permit(:good, :bad, :improvement, :month_id).merge(user_id: current_user.id)
+    params.require(:message).permit(:good, :bad, :improvement, :month_id, :day_id).merge(user_id: current_user.id)
   end
 
   def move_to_index

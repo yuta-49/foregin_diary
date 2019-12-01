@@ -1,4 +1,5 @@
 class Message < ApplicationRecord
   belongs_to :user 
-  belongs_to :month
+  has_many :months
+  has_many :days
 end
