@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
-
+  
+  before_action :move_to_index,  :except => :index
   def index
     @messages = Message.all
   end
@@ -9,9 +10,11 @@ class MessagesController < ApplicationController
   end
 
   def create
-    Message.create(new_params)
+    @message = Message.new(new_params)
+    @message.save
+    redirect_to root_path
   end
-  
+      
   def show
     @message = Message.find(params[:id])
   end
@@ -20,11 +23,14 @@ class MessagesController < ApplicationController
   private
 
   def message_params 
-    params.require(:message).permit(:good, :bad, :improvement)
+    params.require(:message).permit(:user_id, :good, :bad, :improvement)
   end
   
   def new_params
-    params.require(:message).permit(:good, :bad, :improvement)
+    params.require(:message).permit(:good, :bad, :improvement).merge(user_id: current_user.id)
   end
 
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
 end

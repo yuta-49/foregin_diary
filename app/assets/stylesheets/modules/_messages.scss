@@ -13,6 +13,13 @@ body {
   background-image: url('https://cdn.pixabay.com/photo/2016/11/23/15/23/cosmos-1853491_1280.jpg');
 }
 
+.fa {
+  display: block;
+  width: 100px;
+  height: 100px;
+  color:  #32a1ce;
+}
+
 .grid{
   display: flex;
   &__wrapper {
@@ -32,6 +39,7 @@ body {
 .header {
   width: 100%;
   background-color :#55c500;
+  font-family: Helvetica ,"メイリオ",meiryo,sans-serif;
   height: 80px;
   display: flex;
   color: white;
@@ -76,12 +84,6 @@ body {
     margin: 20px 10px;
     background-color: white;
     border: thick double #32a1ce;
-    .fa {
-      display: block;
-      width: 30px;
-      height: 30px;
-      color:  #32a1ce;
-    }
     &__icon {
       display: block;
       width: 50px;
@@ -113,7 +115,7 @@ body {
 .data-wrapper {
   height: 100%;
   width: 1000px;
-  background-image: url("https://image.freepik.com/free-vector/_72857-58.jpg");
+  background-color: #001100;
   .container {
     float: left;
     min-width: 400px;
