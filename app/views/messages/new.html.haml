@@ -18,7 +18,7 @@
     = form_with model: @message, method: :post, local:true do |f|
       .formbox-form
         %label.form 月を選択してください：
-        -# = f.select_collection :month, 
+        = f.collection_select :month_id, Month.all, :id, :name, {prompt: "--"}, class: "select-message" 
           
         %label.form 日付を選択してください：
 
