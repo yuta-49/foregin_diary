@@ -1,3 +1,4 @@
 class Day < ApplicationRecord
-  belongs_to :message
+  has_many :messages
+  belongs_to :user
 end

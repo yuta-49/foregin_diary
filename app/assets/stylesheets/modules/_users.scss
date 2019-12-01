@@ -2,12 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.mypages {
+  height: 1000px;
+  width: 1000px;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+}
+
 .mypages-container {
   height: 300px;
-  width: 200px;
+  width: 800px;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+  .mypages-subtitle {
+    padding-top: 50px;
+  }
+  .mypages-image {
+    height: 100px;
+    width: 500px;
+  }
+  .mypages-year {
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .mypages-box {
+    height: 250px;
+    width: 500px;
+    display: inline-block;
+    .mypages-title-good {
+      padding-left: 10px;
+      height: 30px;
+      width: 600px;
+    }
+  }
+  .home-come {
+    color: #0099FF;
+    display: flex;
+    justify-content: center;
+    a {
+      border-bottom-right-radius: 80px 80px;
+      border: 1px solid #38aef0;
+      height: 30px;
+      width: 100px;
+      display: block;
+    }
+  }
 }
+
+
 
 .section {
   background-color: white;
