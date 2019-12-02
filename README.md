@@ -23,14 +23,13 @@ Things you may want to cover:
 
 * ...
 
-foreign diary
+# foreign diary
   毎日の投資の投資日記アプリです。
 
-Description
+# Description
+:日々の金融商品の投資に関しての日記アプリになります。
 
-  :日々の金融商品の投資に関しての日記アプリになります。
-
-DEMO
+# DEMO
   1.ページを開いたら、ユーザーの新規登録を行います。
   <img width="1434" alt="スクリーンショット 2019-12-02 14 55 33" src="https://user-images.githubusercontent.com/56015345/69934256-c234f080-1514-11ea-8475-7859dde7fbff.png">
 
@@ -50,6 +49,6 @@ DEMO
   5.マイページで閲覧できるようになります。
   <img width="1437" alt="スクリーンショット 2019-12-02 15 10 28" src="https://user-images.githubusercontent.com/56015345/69934662-eba24c00-1515-11ea-9a68-432d2d4a2cbf.png">
 
-Author
+# Author
   yuta-49
 
