@@ -22,10 +22,11 @@
 
         .message-correction 
           .message-correction__mypages-edit
-              
-            .message-correction__mypages-destory
-              = link_to  "/messages/#{message.id}" ,method: :delete, data: { confirm: '本当に削除しますか？' } do
-                %li.fas.fa-cut
+            = link_to "/messages/#{message.id}",method: :get, class: "mypages-edit" do
+              %i.fas.fa-edit
+          .message-correction__mypages-destory
+            = link_to  "/messages/#{message.id}" ,method: :delete, data: { confirm: '本当に削除しますか？' } do
+              %li.fas.fa-cut
             
     .home-come
       = link_to "ホームに戻る",root_path, class: "home-come"
