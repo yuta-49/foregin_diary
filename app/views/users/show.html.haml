@@ -3,21 +3,30 @@
 .mypages
   .mypages-container
     .mypages-subtitle
-      = @nickname
+      = @nickname 
+    
     -@user.messages.each do |message|
       .mypages-box
         .mypages-image
         %ul.mypages-year
-          %li.mypages-day 
-            = message.day.name
           %li.mypages-month
             = message.month.name
+          %li.mypages-day 
+            = message.day.name
         .mypages-title-good
           = message.good
         .mypages-title-good
           = message.bad
         .mypages-title-good
           = message.improvement
+
+        .message-correction 
+          .message-correction__mypages-edit
+              
+            .message-correction__mypages-destory
+              = link_to  "/messages/#{message.id}" ,method: :delete, data: { confirm: '本当に削除しますか？' } do
+                %li.fas.fa-cut
+            
     .home-come
       = link_to "ホームに戻る",root_path, class: "home-come"
   

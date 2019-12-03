@@ -19,6 +19,16 @@ class MessagesController < ApplicationController
     @message = Message.find(params[:id])
   end
 
+  def destroy
+    @message = Message.find(params[:id])
+    if @message.user.id == current_user.id
+      @message.destroy
+    else
+      puts "この投稿を削除しますか？"
+    end
+    redirect_to root_path
+  end
+
 
   private
   def message_params 
