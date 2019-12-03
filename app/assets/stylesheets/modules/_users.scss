@@ -16,23 +16,41 @@
   background-color: rgb(255, 255, 255);
   .mypages-subtitle {
     padding-top: 50px;
-  }
-  .mypages-image {
     height: 100px;
-    width: 500px;
-  }
-  .mypages-year {
-    margin-bottom: 10px;
-    display: flex;
   }
   .mypages-box {
+    margin-left: 10px;
     height: 250px;
     width: 500px;
-    display: inline-block;
+    .mypages-year {
+      margin-bottom: 10px;
+      width: 100px;
+      height: 50px;
+      display: flex;
+    }
     .mypages-title-good {
       padding-left: 10px;
       height: 30px;
-      width: 600px;
+      width: 200px;
+    }
+    .message-correction  {
+      width: 100px;
+      height: 100px;  
+      &__mypages-edit {
+        width: 50px;
+        height: 50px;
+        display:block;
+      }
+      &__mypages-destory{
+        width: 700px;
+        height: 50px;
+        display: block;
+        a {
+          text-align: right;
+          display: block;
+          color: #FF3366;
+        }
+      }
     }
   }
   .home-come {
