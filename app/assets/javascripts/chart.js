@@ -8,8 +8,25 @@ var chartColors = {
 	grey: 'rgb(201, 203, 207)'
 };
 
+
+
 function randomScalingFactor() {
-	return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+  
+	// return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+}
+
+//初期値0
+let a = 0;
+function get_data(){
+	$.ajax({
+			url: "sample.php",
+			method: "POST",
+	})
+	.done(function(data){
+			a = data;
+	});
+	//数字を返す
+	return a;
 }
 
 function onRefresh(chart) {
