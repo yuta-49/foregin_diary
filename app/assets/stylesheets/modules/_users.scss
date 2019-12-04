@@ -10,7 +10,7 @@
 }
 
 .mypages-container {
-  height: 300px;
+  height: 100%;
   width: 800px;
   margin: 0 auto;
   .mypages-subtitle {
@@ -55,6 +55,18 @@
           display: block;
           color: #FF3366;
         }
+      }
+    }
+  }
+  nav {
+    height: 100px;
+    width: 800px;
+    display: flex;
+    span {
+      display:block;
+      height:50px;
+      a {
+        display: block;
       }
     }
   }
