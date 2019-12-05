@@ -9,10 +9,6 @@
   .container
     .chartbox
       %canvas#myChart
-    %p
-      %button#randomizeData Randomize Data
-      %button#addDataset Add Dataset
-      %button#removeDataset Remove Dataset
 
   .formbox
     = form_with model: @message, method: :post, local:true do |f|
