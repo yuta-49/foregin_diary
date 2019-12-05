@@ -52,6 +52,12 @@ opacity: 1;
   height: 100vh;
   width: 100%;
   .message-box {
+    .datas-wrapper {
+      background-color: white;
+      height: 300px;
+      width: 600px;
+      margin: 0 auto;
+    }
     .sliders {
       height: 400px;
       width: 1000px;
