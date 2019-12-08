@@ -9,19 +9,19 @@
   <img width="1434" alt="スクリーンショット 2019-12-02 14 55 33" src="https://user-images.githubusercontent.com/56015345/69934256-c234f080-1514-11ea-8475-7859dde7fbff.png">
 
   2.新規登録画面です。
-  <img width="1427" alt="スクリーンショット 2019-12-02 14 56 08" src="https://user-images.githubusercontent.com/56015345/69934355-04f6c880-1515-11ea-8ddc-c71937a7ddd3.png">
+  <img width="1440" alt="スクリーンショット 2019-12-08 17 57 15" src="https://user-images.githubusercontent.com/56015345/70387109-39222b80-19e4-11ea-8b5e-8bd5a8bf2092.png">
 
   3.その月の番号をクリックし、入力フォームに進みます。
   <img width="1434" alt="スクリーンショット 2019-12-02 14 55 33" src="https://user-images.githubusercontent.com/56015345/69934418-32437680-1515-11ea-8edb-d69175718769.png">
 
   4.こちらの入力フォームで投資の日記をつけれるようになっております。変動グラフでその月の投資の収支を確認できるようになっております。
-  <img width="1439" alt="スクリーンショット 2019-12-02 14 57 04" src="https://user-images.githubusercontent.com/56015345/69934505-6e76d700-1515-11ea-9199-00c36ef5d298.png">
+  <img width="1440" alt="スクリーンショット 2019-12-08 17 59 26" src="https://user-images.githubusercontent.com/56015345/70387126-88685c00-19e4-11ea-8f7f-f5410f2a554a.png">
 
   5.それぞれの項目を入力後、送信を押すとホームに戻ります。
-  ![demo](https://gyazo.com/ae32b01a61d3e0aa3f6ffaa0802c58aa/raw)
+  ![demo](https://gyazo.com/3efed04515b739bb962e7d2e07d11188/raw)
 
   6.入力したメッセージをマイページで閲覧できるようになります。
-  <img width="721" alt="スクリーンショット 2019-12-04 15 06 00" src="https://user-images.githubusercontent.com/56015345/70116996-a2820180-16a7-11ea-9c0f-357e4572c536.png">
+  <img width="1440" alt="スクリーンショット 2019-12-08 17 55 29" src="https://user-images.githubusercontent.com/56015345/70387078-0841f680-19e4-11ea-8ccc-2760513d984b.png">
 
 # Author
   yuta-49
