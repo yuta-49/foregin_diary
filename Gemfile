@@ -68,5 +68,7 @@ gem 'font-awesome-rails'
 gem 'chartkick', '~> 3.2', '>= 3.2.1'
 gem 'jquery-rails'
 gem 'devise'
-gem 'kaminari'
 gem 'pry-rails'
+gem "gon"
+gem "kaminari"
+gem 'bootstrap4-kaminari-views'

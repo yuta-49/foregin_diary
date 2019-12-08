@@ -1,8 +1,10 @@
 !!!
 %html
   %head
+    = Gon::Base.render_data
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title ForeginDiary
+    %link{:crossorigin => "anonymous", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", :integrity => "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm", :rel => "stylesheet"}/
     %link{:href => "https://use.fontawesome.com/releases/v5.6.1/css/all.css", :rel => "stylesheet"}/
     %link{:href => "//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css", :rel => "stylesheet", :type => "text/css"}

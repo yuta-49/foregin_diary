@@ -22,20 +22,42 @@ em {
 }
 
 .signed-up {
-  width: 500px;
-  height: 750px;
+  height: 800px;
+  width: 550px;
   margin: 0 auto;
   padding-top: 30px;
 
   h2 {
-    color: white;
     font-size: 30px;
-    width: 400px;
-    height: 50px;
+    color: white;
+    text-align: center;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   }
   .new_user {
     width: 350px;
   }
+}
+
+.signedup-btn {
+  height: 50px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  a { 
+    color: white;
+  } 
+}
+
+.forgot-btn {
+  height: 50px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  a { 
+    color: white;
+  } 
 }
 
 .field {
@@ -53,3 +75,31 @@ a {
   display: flex;
   justify-content: center;
 }
+
+.login-container {
+  height: 800px;
+  width: 550px;
+  margin: 0 auto;
+  padding-top: 50px;
+  h2 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  }
+}
+
+.forgot-password {
+  height: 800px;
+  width: 550px;
+  margin: 0 auto;
+  padding-top: 50px;
+  h2 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  }
+}
+
+

@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   def show
-    @users = User.includes(:messages).page(params[:page]).per(5)
-    @user = User.find(params[:id])
-    @nickname = @user.nickname 
+    user = User.find(params[:id])
+    @users = user.messages.page(params[:page]).per(4).order("created_at DESC")
+    @messages = current_user.messages.page(params[:page]).per(4)
+    @nickname = current_user.nickname 
   end
 end

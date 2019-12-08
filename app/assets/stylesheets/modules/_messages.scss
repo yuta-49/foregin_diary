@@ -5,7 +5,7 @@
 
 body {
   height: 100%;
-  background-image: url("https://www.pakutaso.com/shared/img/thumb/peiz_DSC00255_TP_V.jpg");
+  background-image: url("xCUQpeQH8SDPrDs1575791827.jpg");
 }
 
 .wrapper {
@@ -15,9 +15,9 @@ body {
 
 .fa {
   display: block;
-  width: 100px;
-  height: 100px;
-  color:  #32a1ce;
+  width: 50px;
+  height: 50px;
+  color: #0099FF;
 }
 
 .grid{
@@ -84,6 +84,12 @@ body {
     margin: 20px 10px;
     background-color: white;
     border: thick double #32a1ce;
+    .messages-detail {
+      height: 50px;
+      width: 50px;
+      background-color: red;
+    }
+
     &__icon {
       display: block;
       width: 50px;
@@ -113,11 +119,10 @@ body {
 
 // new.html.haml
 .data-wrapper {
-  height: 100%;
+  height: 1000px;
   width: 1000px;
   background-color: #001100;
   .container {
-    float: left;
     min-width: 400px;
   }
   .formbox {
@@ -131,4 +136,9 @@ body {
     font-size: 15px;
     padding-top: 15px;
   }
+}
+
+
+.message-menu {
+
 }

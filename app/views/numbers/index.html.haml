@@ -1,16 +1,10 @@
-%script{:src => "//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js", :type => "text/javascript"}
-
-= render "messages/header"
-
-.message-wrapper 
-  .message-box
-    .datas-wrapper 
-      = form_with model: @numbers, method: :post, local:true do |f|
-        %label.datas 数字を入力してください
-        = f.number_field :win, class: "datas"
-        = f.number_field :lose, class: "datas"
-        = f.submit "submit", class:"datas"
-        
-      
-
-= render "messages/footer"
+%head
+  = Gon::Base.render_data
+  %script{:src => "https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"}
+  %script{:src => "https://cdn.jsdelivr.net/npm/chart.js@2.8.0"}
+  %script{:src => "https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@1.8.0"}
+  
+.data-wrapper
+  .container
+    .chartbox
+      %canvas#myChart
