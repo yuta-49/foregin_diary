@@ -8,4 +8,8 @@ class User < ApplicationRecord
   has_many :days
   has_many :months
   has_many :numbers
+
+  validates :nickname, presence: true
+  validates :email, presence: true
+  validates :password, presence: true
 end

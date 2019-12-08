@@ -18,7 +18,7 @@
   <img width="1440" alt="スクリーンショット 2019-12-08 17 59 26" src="https://user-images.githubusercontent.com/56015345/70387126-88685c00-19e4-11ea-8f7f-f5410f2a554a.png">
 
   5.それぞれの項目を入力後、送信を押すとホームに戻ります。
-  ![demo](https://gyazo.com/aa2b424adc48f65c4335ad635c23a673/raw)
+  ![demo](https://gyazo.com/https://gyazo.com/aa2b424adc48f65c4335ad635c23a673/raw)
 
   6.入力したメッセージをマイページで閲覧できるようになります。
   <img width="1440" alt="スクリーンショット 2019-12-08 17 55 29" src="https://user-images.githubusercontent.com/56015345/70387078-0841f680-19e4-11ea-8ccc-2760513d984b.png">

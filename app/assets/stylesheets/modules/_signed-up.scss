@@ -33,8 +33,10 @@ em {
     text-align: center;
     font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   }
-  .new_user {
-    width: 350px;
+  ul {
+    li {
+      color: red;
+    }
   }
 }
 
