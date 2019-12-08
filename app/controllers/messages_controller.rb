@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   
   before_action :move_to_index,  :except => :index
   def index
-    @messages = Message.all.includes(:user).order("created_at DESC")
+    messages = Message.all
   end
 
   def  new
@@ -17,6 +17,7 @@ class MessagesController < ApplicationController
       
   def show
     @message = Message.find(params[:id])
+    @messgae = Message.page(params[:page]).per(3).order("created_at DESC")
   end
 
   def edit
@@ -53,4 +54,5 @@ class MessagesController < ApplicationController
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
+
 end

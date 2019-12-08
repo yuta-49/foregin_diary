@@ -1,0 +1,27 @@
+.mypages-container
+  -@user.messages.each do |message|
+    .mypages-box
+      .mypages-image
+      %ul.mypages-year
+        %li.mypages-month
+          = message.month.name
+        %li.mypages-day 
+          = message.day.name
+      .mypages-title-good
+        = message.good
+      .mypages-title-good
+        = message.bad
+      .mypages-title-good
+        = message.improvement
+
+      .message-correction 
+        .message-correction__mypages-edit
+          = link_to "/messages/#{message.id}",method: :get, class: "mypages-edit" do
+            %i.fas.fa-edit
+        .message-correction__mypages-destory
+          = link_to  "/messages/#{message.id}" ,method: :delete, data: { confirm: '本当に削除しますか？' } do
+            %li.fas.fa-cut
+  = paginate(@messages)
+.home-come
+  = link_to "ホームに戻る",root_path, class: "home-come"
+    

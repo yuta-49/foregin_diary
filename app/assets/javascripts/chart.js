@@ -11,22 +11,15 @@ var chartColors = {
 
 
 function randomScalingFactor() {
-  
-	// return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+	return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 500);
 }
 
-// let a = 0;
-// function get_data(){
-// 	$.ajax({
-// 		url: "datas/data",
-// 		method: "POST",
-// 	})
-// 	.done(function(data){
-// 		a = data;
-// 	});
-// 	//数字を返す
-// 	return a;
-// }
+
+function got_data(){
+	let ary = gon.data;
+	console.log(ary);
+	return (ary);
+}
 
 function onRefresh(chart) {
 	chart.config.data.datasets.forEach(function(dataset) {
@@ -99,7 +92,7 @@ window.onload = function() {
 document.getElementById('randomizeData').addEventListener('click', function() {
 	config.data.datasets.forEach(function(dataset) {
 		dataset.data.forEach(function(dataObj) {
-			dataObj.y = randomScalingFactor();
+			dataObj.y = got_data();
 		});
 	});
 	window.myChart.update();

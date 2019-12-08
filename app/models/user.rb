@@ -5,5 +5,7 @@ class User < ApplicationRecord
         :recoverable, :rememberable, :validatable
 
   has_many :messages
+  has_many :days
+  has_many :months
   has_many :numbers
 end
