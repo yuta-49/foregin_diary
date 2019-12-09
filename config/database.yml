@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: foregin_diary_production
-  username: foregin_diary
-  password: <%= ENV['FOREGIN_DIARY_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
