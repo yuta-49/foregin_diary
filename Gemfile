@@ -72,3 +72,7 @@ gem 'pry-rails'
 gem "gon"
 gem "kaminari"
 gem 'bootstrap4-kaminari-views'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
