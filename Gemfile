@@ -76,8 +76,7 @@ gem 'pry-rails'
 gem "gon"
 gem "kaminari"
 gem 'bootstrap4-kaminari-views'
-gem 'sassc', '~> 2.2', '>= 2.2.1'
-gem 'font-awesome-sass', '~> 5.11', '>= 5.11.2'
+
 
 group :production do
   gem 'unicorn', '5.4.1'
