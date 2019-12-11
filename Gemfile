@@ -76,8 +76,6 @@ gem 'pry-rails'
 gem "gon"
 gem "kaminari"
 gem 'bootstrap4-kaminari-views'
-gem "selenium-webdriver"
-gem "chromedriver-helper"
 
 
 group :production do
