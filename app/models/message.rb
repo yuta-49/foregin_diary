@@ -6,7 +6,7 @@ class Message < ApplicationRecord
   validates :day_id, presence: true
 
   
-  belongs_to :user 
-  belongs_to :day 
-  belongs_to :month
+  # belongs_to :user 
+  # belongs_to :day 
+  # belongs_to :month
 end
