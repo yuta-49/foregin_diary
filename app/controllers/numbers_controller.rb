@@ -20,7 +20,7 @@ class NumbersController < ApplicationController
   def create
     @number = Number.new(number_params)
     @number.save
-    redirect_to new_message_path
+    redirect_to calenders_path
   end
 
   def get_number

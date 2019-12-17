@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       get "get_number"
     end
   end
+
+  resources :calenders, only: [:index, :new, :create]
 end
 
 
