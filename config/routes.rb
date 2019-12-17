@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :calenders, only: [:index, :new, :create]
+  resources :calenders, only: [:index, :new, :create, :destroy]
 end
 
 
