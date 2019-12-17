@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  today_total = function(win, lose){
+  create_event = function(title, start, end){
     $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
       var token;
       if (!options.crossDomain) {
@@ -12,11 +12,11 @@ $(document).ready(function() {
     });
     $.ajax({
       type: "post",
-      url: "/calenders/create",
-      dataType: 'json',
+      url: "/calenders#create",
       data: {
-        data_win: win,
-        data_lose: lose
+        title: title,
+        start: start.toISOString(),
+        end: end.toISOString()
       }
     }).done(function(data){
       alert("登録しました!");
@@ -34,24 +34,24 @@ $(document).ready(function() {
     navLinks: true,
     selectable: true,
     selectHelper: true,
-    select: function(win, lose) {
-      var title = prompt('本日の収支を入力してください');
+    select: function(start, end) {
+      var title = prompt('本日の収支を報告してください');
       var eventData;
       if (title) {
         eventData = {
           title: title,
-          start: win,
-          end: lose
+          start: start,
+          end: end
         };
-        console.log(eventData);
         $('#calendar').fullCalendar('renderEvent', eventData, true);
         $('#calendar').fullCalendar('unselect');
-        today_total(win, lose);
+        create_event(title, start, end);
       }
     },
+    eventColor: '#63ceef',
+    eventTextColor: '#000000',
     timezone: 'UTC',
     events: '/calenders.json',
     editable: true
   });
-
 });

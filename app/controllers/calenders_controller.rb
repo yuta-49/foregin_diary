@@ -1,5 +1,5 @@
 class CalendersController < ApplicationController
-
+  
   def index
     @calenders = Calender.all
 
@@ -13,15 +13,20 @@ class CalendersController < ApplicationController
   end
 
   def create
-    @calender = Calender.new(calender_params)
+    @calender  = Calender.new
     @calender.attributes = {
-      win: params[:data_win],
-      lose: params[:data_lose],
+      user_id: current_user.id,
+      title: params[:title],
+      start: params[:start],
+      end: params[:end],
     }
     @calender.save
     respond_to do |format|
       format.json {
-        render :json
+        render json:
+        @calender.to_json(
+          only: [:id, :title, :start, :end]
+        )
       }
     end
   end
@@ -33,7 +38,12 @@ class CalendersController < ApplicationController
   end
   
   private
+
+  def  set_calender
+    @calender = Calender.find(params[:id])
+  end
+
   def calender_params
-    params.require(:calender).permit(:data_win, :data_lose).merge(user_id: current_user.id)
+    params.require(:calender).permit(:title, :start, :end).merge(user_id: current_user.id)
   end
 end

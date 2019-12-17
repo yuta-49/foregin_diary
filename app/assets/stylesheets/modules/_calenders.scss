@@ -1,3 +1,93 @@
 // Place all the styles related to the calenders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+element.style {
+  height: 121px;
+}
+
+#calendar {
+  max-width: 1000px;
+  height: 850px;
+  margin:  0 auto;
+  background-color: white;
+}
+
+.fc {
+  direction: ltr;
+  text-align: left;
+}
+
+.fc-toolbar {
+  margin-bottom: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+
+}
+
+.fc-left {
+  h2 {
+    font-size: 1.75em;
+    margin: 0;
+  }
+}
+
+
+.fc-button-group {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.fc-view-container {
+  position: relative;
+}
+
+.fc-view, .fc-view>table {
+  position: relative;
+  z-index: 1;
+}
+
+.fc-day-header {
+  text-align: center;
+}
+
+.fc table {
+  width: 100%;
+  box-sizing: border-box;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+}
+
+.fc td {
+  border-style: solid;
+  border-width: 1px;
+  padding: 0;
+  vertical-align: top;
+  text-align: center;
+}
+
+.fc .fc-row {
+  border-style: solid;
+  border-width: 0;
+}
+
+.fc-unthemed thead {
+  border-color: #ddd;
+}
+
+.fc-row:first-child table {
+  border-top: 0 hidden transparent;
+}
+
+.fc-content-skeleton {
+  table {
+    height: 120px;
+  }
+}
