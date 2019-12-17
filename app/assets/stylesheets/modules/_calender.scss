@@ -25,7 +25,15 @@ element.style {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-right: 30px;
+  padding-top: 10px;
+
+}
+
+.fc-left {
+  h2 {
+    font-size: 1.75em;
+    margin: 0;
+  }
 }
 
 
