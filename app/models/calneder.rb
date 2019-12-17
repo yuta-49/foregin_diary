@@ -1,0 +1,2 @@
+class Calneder < ApplicationRecord
+end
