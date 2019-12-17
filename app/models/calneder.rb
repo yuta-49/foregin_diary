@@ -1,2 +1,0 @@
-class Calneder < ApplicationRecord
-end

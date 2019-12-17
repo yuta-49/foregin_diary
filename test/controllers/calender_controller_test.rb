@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CalnederTest < ActiveSupport::TestCase
+class CalenderControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
