@@ -1,0 +1,2 @@
+class CalendersController < ApplicationController
+end
