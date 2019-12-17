@@ -71,6 +71,8 @@ gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'chartkick', '~> 3.2', '>= 3.2.1'
 gem 'jquery-rails'
+gem 'fullcalendar-rails' 
+gem 'momentjs-rails'
 gem 'devise'
 gem 'pry-rails'
 gem "gon"
