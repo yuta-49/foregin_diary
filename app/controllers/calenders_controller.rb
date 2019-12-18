@@ -1,4 +1,5 @@
 class CalendersController < ApplicationController
+  before_action :move_to_index
   def index
     @calenders = current_user.calenders.all
 
@@ -37,6 +38,9 @@ class CalendersController < ApplicationController
   end
   
   private
+  def move_to_index
+    redirect_to root_path unless user_signed_in?
+  end
   def  set_calender
     @calender = Calender.find(params[:id])
   end
