@@ -20,17 +20,18 @@ body {
   color: #0099FF;
 }
 
+.mypage {
+  height: 35px;
+}
 .grid{
   display: flex;
   margin-right: 20px;
-  .grid:hover {
-    background-color: #fafafa;
-    color:  rgb(255, 115, 0);
-  }
   .grid-wrapper {
     display: flex;
     margin-top: 35px;
     padding-right: 20px;
+    .mypage{
+    }
     a:hover {
       color: #0099FF;
     }
@@ -61,6 +62,10 @@ body {
     box-shadow: 0 2px 5px rgba(170,170,170,0.5);
     height: 80px;
     width: 160px;
+    a:hover {
+      background-color: #fafafa;
+      color:  rgb(255, 115, 0);
+    }
     a {
       font-size: 14px;
       white-space: nowrap;
