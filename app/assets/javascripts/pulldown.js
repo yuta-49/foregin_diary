@@ -1,8 +1,8 @@
 $(function () {
-  $(".grid").on("mouseover", function() {
+  $(".mypage").on("mouseover", function() {
     $(".grid-list").show();
   });
-  $(".grid").on("mouseout", function() {
+  $(".mypage").on("mouseout", function() {
     $(".grid-list").hide();
   });
 });
