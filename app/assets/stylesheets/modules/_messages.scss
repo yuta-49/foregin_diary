@@ -20,9 +20,6 @@ body {
   color: #0099FF;
 }
 
-.mypage {
-  height: 35px;
-}
 .grid{
   display: flex;
   margin-right: 20px;
@@ -30,50 +27,53 @@ body {
     display: flex;
     margin-top: 35px;
     padding-right: 20px;
-    .mypage{
+    margin-bottom: 0;
+    .mypage:hover > .mypage-list {
+      display: block;
+    }
+    .mypage {
+      position: relative;
+      margin-right: 20px;
+      .mypage-list{
+        display: none;
+        position: absolute;
+        top: 38px;
+        right: -90px;
+        width: 170px;
+        background-color: white;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        .mypage-calender {
+          min-width: 150px;
+          border-top: 1px solid #eee;
+          white-space: nowrap;
+          visibility: visible;
+          opacity: 1;
+          a:hover {
+            background-color: #fafafa;
+            color:  rgb(255, 115, 0);
+          }
+          a {
+            display: block;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .mypage:hover + .mypage-list {
+      display: block;
     }
     a:hover {
       color: #0099FF;
     }
     a {
-      height: 40px;
+      line-height: 30x;
       text-decoration: none;
       display: block;
-      margin-left: 20px;
       color: white;
-    }
-  }
-  .grid-list {
-    display: none;
-    background-color: white;
-    position: absolute;
-    top: 75px;
-    right: 60px;
-    left: auto;
-    float: left;
-    padding: 0;
-    line-height: 1;
-    color: #333;
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    background-color: #fff;
-    list-style: none;
-    box-shadow: 0 2px 5px rgba(170,170,170,0.5);
-    height: 80px;
-    width: 160px;
-    a:hover {
-      background-color: #fafafa;
-      color:  rgb(255, 115, 0);
-    }
-    a {
-      font-size: 14px;
-      white-space: nowrap;
-      display: block;
-      padding: 10px;
-      color: black;
-      text-decoration: none;
-      position: relative;
     }
   }
 }
