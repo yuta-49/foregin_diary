@@ -1,14 +1,16 @@
 .header 
   .header__wrapper
     = link_to "経済ニュース", "https://m.finance.yahoo.co.jp/fx/marketcalendar", class: "header__btn"
-    .header-diary
-      = link_to "foregin diary", root_path, class: "header-diary" 
+
 
   .grid
     -if user_signed_in?
-      .grid__wrapper
+      .grid-wrapper
         = link_to "マイページ", "/users/#{current_user.id}", method: :get
         = link_to "ログアウト",  destroy_user_session_path, method: :delete
+      .grid-list
+        = link_to "カレンダー", new_calender_path, class: "grid"
+        = link_to "トップページ", root_path, class: "grid"
     -else
       .grid__wrapper
         = link_to "ログイン", new_user_session_path, class: 'post'
