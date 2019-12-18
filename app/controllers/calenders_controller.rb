@@ -1,7 +1,7 @@
 class CalendersController < ApplicationController
   
   def index
-    @calenders = Calender.all
+    @calenders = current_user.calenders.all
 
     respond_to do |format|
       format.json { render :json => @calenders}

@@ -48,9 +48,18 @@ $(document).ready(function() {
         create_event(title, start, end);
       }
     },
+    eventClick: function(calEvent) {
+      let destroyHTML = 
+        `<div class = fc-content>`
+      $('#modalTitle').html(calEvent.title);
+      $('#calendarModal').modal(); // モーダル着火
+      $("#calender").fullcalndar("destroy", destroyHTML, true);
+    },
+    ttitleFormat: 'YYYY年 M月',
+    timeFormat: 'HH:mm',
+    timezone: 'Asia/Tokyo', 
     eventColor: '#63ceef',
     eventTextColor: '#000000',
-    timezone: 'UTC',
     events: '/calenders.json',
     editable: true
   });
