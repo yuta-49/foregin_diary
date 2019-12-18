@@ -10,12 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery 
-//= require jquery_ujs
 //= require rails-ujs
+//= require activestorage
+//= require jquery 
 //= require moment
 //= require fullcalendar
 //= require fullcalendar/lang/ja
+//= require jquery_ujs
 //= require chartkick
 //= require Chart.bundle
 //= require_tree .

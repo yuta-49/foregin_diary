@@ -1,5 +1,4 @@
 class CalendersController < ApplicationController
-  
   def index
     @calenders = current_user.calenders.all
 
@@ -38,7 +37,6 @@ class CalendersController < ApplicationController
   end
   
   private
-
   def  set_calender
     @calender = Calender.find(params[:id])
   end
