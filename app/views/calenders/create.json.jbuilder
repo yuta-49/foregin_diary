@@ -1,6 +1,7 @@
-json.array!(@numbers) do |number|
-  json.id       number.id
-  json.win      number.win
-  json.lose     number.lose
-  json.user_id  number.user_id
+json.array!(@calender) do |calender|
+  json.id       calender.id
+  json.title    calender.title
+  json.start    calender.start   
+  json.end      calender.end
+  json.url      event_url(calender, format: :html) 
 end
