@@ -7,16 +7,18 @@
     
     -@users.each do |message|
       .mypages-box
-        .mypages-image
         %ul.mypages-year
           %li.mypages-month
             = message.month.name
           %li.mypages-day 
             = message.day.name
+        %p 良かった点：
         .mypages-title-good
           = message.good
+        %p 悪かった点：
         .mypages-title-good
           = message.bad
+        %p 改善点：
         .mypages-title-good
           = message.improvement
 
@@ -27,5 +29,6 @@
     = paginate @messages
     .home-come
       = link_to "ホームに戻る",root_path, class: "home-come"
-= render "messages/footer"
+
+.footer
   
