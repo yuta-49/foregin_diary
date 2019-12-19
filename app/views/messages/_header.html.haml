@@ -12,6 +12,7 @@
             %li.mypage-calender 
               = link_to "カレンダー", new_calender_path, class: "mypage-calender"
               = link_to "トップページ", root_path, class: "mypage-calender"
+              = link_to "日記を書く", new_message_path, class: "mypage-calender"
         .logout
           = link_to "ログアウト",  destroy_user_session_path, method: :delete
     -else
