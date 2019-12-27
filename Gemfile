@@ -82,7 +82,6 @@ gem "gon"
 gem "kaminari"
 gem 'bootstrap4-kaminari-views'
 gem 'quandl'
-gem 'rspec-rails'
 
 
 

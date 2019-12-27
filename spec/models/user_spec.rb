@@ -1,7 +1,7 @@
 require 'rails_helper'
+
 describe User do
-  describe 'create' do
-    
+  describe '#create' do
     # 1. nicknameとemail、passwordとpassword_confirmationが存在すれば登録できること
     it "is valid with a nickname, email, password, password_confirmation" do
       user = build(:user)
