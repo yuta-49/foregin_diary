@@ -45,16 +45,17 @@ describe MessagesController, type: :controller do
         expect(response.status).to eq 302
       end
 
-      # it "renders the :new template" do
-      #   delefte :destroy, params: {id: @message.user.id}
-      #   expect(response).to redirect_to :new
-      # end
+      it "delete the message" do
+        expect {
+          delete :destroy, params: {id:  @message.user.id }
+        }.to change(Message, :count).by(0)
+      end
     end
     context "how to delete a message" do
 
-      it "deletes the message" do
-        delete :destroy, params: {id: @message.user.id}
-        expect{ response }.to change(Message,:count).by(-1)
+      it "redirects to the new" do
+        delete :destroy, params: {id: @message.user.id }
+        expect(response).to redirect_to("http://test.host/")
       end
     end
   end
