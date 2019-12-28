@@ -13,4 +13,16 @@ describe MessagesController, type: :controller do
       expect(response).to redirect_to root_path
     end
   end
+
+  describe 'GET #new' do
+    it "renders the :new template" do
+      get :new
+      expect(response).to redirect_to root_path
+    end
+
+    it "request must be 200 OK" do
+      get :new
+      expect(response.status).to eq 302
+    end
+  end
 end
