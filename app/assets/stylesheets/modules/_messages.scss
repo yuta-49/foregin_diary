@@ -8,6 +8,17 @@ body {
   background-image: image-url("xCUQpeQH8SDPrDs1575791827.jpg");
 }
 
+@media screen and (min-width:480px) { 
+  /*　for iPhone Landscape　(iPhone 横)　*/
+}
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+  .header {
+    font-size: 20px;
+  }
+}
+
 .wrapper {
   box-sizing: border-box;
   background-image: url('https://cdn.pixabay.com/photo/2016/11/23/15/23/cosmos-1853491_1280.jpg');
@@ -117,12 +128,15 @@ body {
     text-decoration: none; 
   }
 }
+
+
 .data {
   margin: 0 auto;
   display: flex;
   flex-wrap:wrap;
   padding: 30px 100px;
-  width: 1150px;
+  max-width: 1150px;
+  margin: auto;
   height: 100%;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8D32NVjJ8-vC-weN7fhitk6QdBoBTTWKmiL_NcTMxy1PEvvOD&s');
   &__databox {
