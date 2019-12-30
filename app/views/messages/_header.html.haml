@@ -6,6 +6,12 @@
   .grid
     -if user_signed_in?
       .grid-wrapper
+        .search
+          = form_with model: Message.new , local: true do |f|
+            .field
+              = text_field_tag :search
+              = submit_tag "Search" 
+
         .mypage
           = link_to "マイページ", "/users/#{current_user.id}", method: :get
           %ul.mypage-list
@@ -15,6 +21,7 @@
               = link_to "日記を書く", new_message_path, class: "mypage-calender"
         .logout
           = link_to "ログアウト",  destroy_user_session_path, method: :delete
+  
     -else
       %ul.grid-wrapper
         %li.login
