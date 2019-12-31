@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
     collection do
-      get 'mypage-search'
+      get 'mypage_search'
+      get 'serach_result'
     end
   end
 
