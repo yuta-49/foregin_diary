@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     collection do
       'mypage-search'
     end
+  end
 
   resources :numbers, only: [:index, :new, :create] do
     collection do
