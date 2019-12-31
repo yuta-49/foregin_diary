@@ -7,7 +7,7 @@
     -if user_signed_in?
       .grid-wrapper
         .search
-          = form_with model: Message.new , method: :get do |f|
+          = form_with model: method: :get, local: true do |f|
             = text_field_tag :search
             = submit_tag "Search" 
 

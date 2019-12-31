@@ -7,5 +7,7 @@ class UsersController < ApplicationController
   end
 
   def mypage_search
+    user = User.find(params[:id])
+    @users = user.messages.page(params[:page]).per(4).order("created_at DESC").search(params[:search])
   end
 end
