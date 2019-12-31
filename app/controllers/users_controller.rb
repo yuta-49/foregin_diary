@@ -6,14 +6,10 @@ class UsersController < ApplicationController
     @nickname = current_user.nickname 
   end
 
-  def mypage_search
-    if params[:good].present?
-      @user_good = User.where('good LIKE', "%#{params[:good]}%")
-    else
-      @users = User.none
-    end
-  end
+  # def mypage_search
+  # end
 
   def search_result
+    @users = User.search(params)
   end
 end
