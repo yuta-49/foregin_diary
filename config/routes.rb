@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   root to: "messages#index"
   resources :messages, only: [:index, :new, :create, :show, :edit, :destroy]
 
-  resources :users, only: [:show] 
+  resources :users, only: [:show] do
+    collection do
+      'mypage-search'
+    end
 
   resources :numbers, only: [:index, :new, :create] do
     collection do
