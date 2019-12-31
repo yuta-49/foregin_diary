@@ -5,4 +5,7 @@ class UsersController < ApplicationController
     @messages = current_user.messages.page(params[:page]).per(4)
     @nickname = current_user.nickname 
   end
+
+  def mypage_search
+  end
 end
