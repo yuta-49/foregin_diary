@@ -13,4 +13,7 @@ class UsersController < ApplicationController
       @users = User.none
     end
   end
+
+  def search_result
+  end
 end
