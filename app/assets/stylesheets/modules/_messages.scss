@@ -44,6 +44,12 @@ body {
     margin-top: 35px;
     padding-right: 20px;
     margin-bottom: 0;
+    .search {
+      input {
+        width: 150px;
+        height: 40px;
+      }
+    }
     .mypage:hover > .mypage-list {
       display: block;
     }

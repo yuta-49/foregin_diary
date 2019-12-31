@@ -7,10 +7,9 @@
     -if user_signed_in?
       .grid-wrapper
         .search
-          = form_with model: Message.new , local: true do |f|
-            .field
-              = text_field_tag :search
-              = submit_tag "Search" 
+          = form_with model: Message.new , method: :get do |f|
+            = text_field_tag :search
+            = submit_tag "Search" 
 
         .mypage
           = link_to "マイページ", "/users/#{current_user.id}", method: :get
