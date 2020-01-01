@@ -39,6 +39,21 @@ body {
       margin-left: 20px;
     } 
   }
+  .user-wrapper {
+    padding-right: 20px;
+    margin-top: 30px;
+    display: flex;
+    a:hover {
+      color: #0099FF;
+    }
+    a {
+      margin-right: 20px;
+      line-height: 30x;
+      text-decoration: none;
+      display: block;
+      color: white;
+    }
+  }
   .grid-wrapper {
     display: flex;
     padding-right: 20px;

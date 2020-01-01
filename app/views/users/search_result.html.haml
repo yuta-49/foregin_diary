@@ -4,7 +4,6 @@
   .mypages-container
     .mypages-subtitle
       = @nickname 
-    
     -@users.each do |message|
       .mypages-box
         %ul.mypages-year
@@ -12,7 +11,6 @@
             = message.month.name
           %li.mypages-day 
             = message.day.name
-    
         %p 良かった点：
         .mypages-title-good
           = message.good
@@ -22,11 +20,10 @@
         %p 改善点：
         .mypages-title-good
           = message.improvement
-
         .mypages-destory
           = link_to  "/messages/#{message.id}" ,method: :delete, data: { confirm: '本当に削除しますか？' } do
             %li.fas.fa-cut
-      = paginate @messages
+    = paginate @messages
     .home-come
       = link_to "ホームに戻る",root_path, class: "home-come"
 
