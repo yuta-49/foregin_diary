@@ -6,6 +6,12 @@
   .grid
     -if user_signed_in?
       .grid-wrapper
+        = form_with  url: search_result_users_path, method: :get, local: true do |f|
+          .search
+            = f.text_field :good, {class:"search__text", placeholder: "よかった点を入力してください"}
+            = f.submit "検索",{class:"search__btn"}
+
+
         .mypage
           = link_to "マイページ", "/users/#{current_user.id}", method: :get
           %ul.mypage-list
