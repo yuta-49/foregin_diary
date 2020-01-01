@@ -17,7 +17,7 @@
           = link_to "ログアウト",  destroy_user_session_path, method: :delete
   
     -else
-      %ul.grid-wrapper
+      %ul.user-wrapper
         %li.login
           = link_to "ログイン", new_user_session_path, class: 'post'
         %li.new-user
