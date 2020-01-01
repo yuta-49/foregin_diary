@@ -41,21 +41,15 @@ body {
   }
   .grid-wrapper {
     display: flex;
-    margin-top: 35px;
     padding-right: 20px;
     margin-bottom: 0;
-    .search {
-      input {
-        width: 150px;
-        height: 40px;
-      }
-    }
     .mypage:hover > .mypage-list {
       display: block;
     }
     .mypage {
       position: relative;
       margin-right: 20px;
+      margin-top: 30px;
       .mypage-list{
         display: none;
         position: absolute;
@@ -97,6 +91,38 @@ body {
       display: block;
       color: white;
     }
+    .logout {
+      a {
+        display: block;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.search {
+  display: flex;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 10px;
+  width: 350px;
+  border-radius: 5px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow:0 0 4px #666666;
+  &__text {
+    display: block;
+    width: 300px;
+    height:40px;
+    border-width: 0;
+  }
+  &__btn {
+    display: block;
+    color: white;
+    background-color: #FF1A6F;
+    border-radius: 0 5px 5px 0;
+    width: 50px;
+    height: 40px;
   }
 }
 
