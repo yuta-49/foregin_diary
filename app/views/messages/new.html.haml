@@ -14,18 +14,18 @@
     = form_with model: @message, method: :post, local:true do |f|
       .formbox-form
         %label.form 月を選択してください：
-        = f.collection_select :month_id, Month.all, :id, :name, {prompt: "--"}, class: "select-message" 
+        = f.collection_select :month_id, Month.all, :id, :name, {prompt: "--"}, :required => "", class: "select-message" 
           
         %label.form 日を選択してください：
-        = f.collection_select :day_id, Day.all, :id, :name, {prompt: "--"}, class: "select-message" 
+        = f.collection_select :day_id, Day.all, :id, :name, {prompt: "--"}, :required => "", class: "select-message" 
 
 
         %label.form 1.よかった点：
-        = f.text_field  :good, {:placeholder => "入力してください"} 
+        = f.text_field  :good, {:required => "", :placeholder => "メッセージを入力してください"} 
         %label.form 2.悪かった点：
-        = f.text_field  :bad, {:placeholder => "入力してください"}
+        = f.text_field  :bad, {:required => "", :placeholder => "メッセージを入力してください"}
         %label.form 3.改善点：
-        = f.text_field  :improvement, {:placeholder => "入力してください"}
+        = f.text_field  :improvement, {:required => "", :placeholder => "メッセージを入力してください"}
       = f.submit "送信", {class: "formbox__submit"} 
 
 .footer
