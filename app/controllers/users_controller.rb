@@ -8,9 +8,8 @@ class UsersController < ApplicationController
 
   def search_result
     @nickname = current_user.nickname 
-    @messages = current_user.messages.page(params[:page]).per(4)
     if 
-      @users = current_user.messages.where(['good LIKE ?', "%#{params[:good]}%"]).page(params[:page]).per(4) #検索とuseanameの部分一致を表示。
+      @users = current_user.messages.where(['good LIKE ?', "%#{params[:good]}%"]).page(params[:page]).per(4).order("created_at DESC") #検索とuseanameの部分一致を表示。
     else
       @users = User.none
     end
