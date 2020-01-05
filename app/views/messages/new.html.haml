@@ -21,11 +21,11 @@
 
 
         %label.form 1.よかった点：
-        = f.text_field  :good, {:required => "", :placeholder => "入力してください"} 
+        = f.text_field  :good, {:required => "", :placeholder => "メッセージを入力してください"} 
         %label.form 2.悪かった点：
-        = f.text_field  :bad, {:required => "", :placeholder => "入力してください"}
+        = f.text_field  :bad, {:required => "", :placeholder => "メッセージを入力してください"}
         %label.form 3.改善点：
-        = f.text_field  :improvement, {:required => "", :placeholder => "入力してください"}
+        = f.text_field  :improvement, {:required => "", :placeholder => "メッセージを入力してください"}
       = f.submit "送信", {class: "formbox__submit"} 
 
 .footer
