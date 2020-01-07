@@ -24,7 +24,7 @@
           = message.improvement
         
         .mypages-edit
-          = link_to  "/messages/#{message.id}/edit", method: :get
+          = link_to "編集", "/messages/#{message.id}/edit", method: :get
         .mypages-destory
           = link_to  "/messages/#{message.id}" ,method: :delete, data: { confirm: '本当に削除しますか？' } do
             %li.fas.fa-cut
