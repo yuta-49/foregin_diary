@@ -16,16 +16,21 @@ function randomScalingFactor() {
 
 
 function got_data(){
-	let ary = gon.data;
-	console.log(ary);
-	return (ary);
+	$.ajax ({
+		type: "GET",
+		url: "get_number",
+		dataType: "json"
+	})    
+	.done(function(data) {
+		console.log(data)
+	})
 }
 
 function onRefresh(chart) {
 	chart.config.data.datasets.forEach(function(dataset) {
 		dataset.data.push({
 			x: Date.now(),
-			y: randomScalingFactor()
+			y: got_data()
 		});
 	});
 }

@@ -2,7 +2,6 @@ class NumbersController < ApplicationController
 
   def index
     @numbers = Number.all
-    gon.data = []
     gon.data << @numbers
   end
 
@@ -24,7 +23,7 @@ class NumbersController < ApplicationController
   end
 
   def get_number
-    @show_number = Number.find(params[:id])
+    @show_number = Number.all
     respond_to do |format|
       format.json
     end
