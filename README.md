@@ -36,7 +36,7 @@
 
 
   7.入力したメッセージをマイページで閲覧できるようになります。
-  <img width="1412" alt="スクリーンショット 2019-12-28 22 12 41" src="https://user-images.githubusercontent.com/56015345/71544188-52087600-29bf-11ea-9573-eb501eae9f8b.png">
+  <img width="1404" alt="スクリーンショット 2020-01-07 16 21 30" src="https://user-images.githubusercontent.com/56015345/71876319-cd111f80-3169-11ea-96f8-cfc9a9e92ea0.png">
 
 # Author
   yuta-49
