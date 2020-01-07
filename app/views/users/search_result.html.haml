@@ -20,9 +20,13 @@
         %p 改善点：
         .mypages-title-good
           = message.improvement
-        .mypages-destory
-          = link_to  "/messages/#{message.id}" ,method: :delete, data: { confirm: '本当に削除しますか？' } do
-            %li.fas.fa-cut
+        %ul.message-function
+          %li.mypages-destory
+            = link_to  "/messages/#{message.id}" ,method: :delete, data: { confirm: '本当に削除しますか？' } do
+              %i.fas.fa-cut
+          %li.mypages-edit
+            = link_to "/messages/#{message.id}/edit", method: :get, data: { confirm: '本当に編集しますか？' } do
+              %i.fas.fa-edit
     = paginate @users
     .home-come
       = link_to "ホームに戻る",root_path, class: "home-come"
