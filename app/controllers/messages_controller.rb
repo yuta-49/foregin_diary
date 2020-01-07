@@ -28,10 +28,10 @@ class MessagesController < ApplicationController
     message = Message.find(params[:id])
     if message.user.id == current_user.id
       message.update(message_params)
-      redirect_to root_path
     else
-      render 'edit'
+      puts "この投稿を編集しますか？"
     end
+    redirect_to root_path
   end
 
   def destroy
