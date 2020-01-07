@@ -44,6 +44,13 @@ class MessagesController < ApplicationController
     redirect_to new_message_path
   end
 
+  def get_number
+    @numbers = Number.find(params[:id])
+    respond_to do |format|
+      format.json
+    end
+  end
+
 
   private
   def message_params 
