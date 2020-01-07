@@ -11,7 +11,7 @@
       %canvas#myChart
 
   .formbox
-    = form_with model: @message, method: :post, local:true do |f|
+    = form_with model: @message, method: :patch, local:true do |f|
       .formbox-form
         %label.form 月を選択してください：
         = f.collection_select :month_id, Month.all, :id, :name, {prompt: "--"}, :required => "", class: "select-message" 
