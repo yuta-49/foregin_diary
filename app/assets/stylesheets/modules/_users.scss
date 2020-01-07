@@ -50,15 +50,24 @@ p {
       text-decoration: underline;
     }
   }
-  .mypages-destory{
-    padding-bottom: 30px;
-    height: 30px;
+  .message-function {
     display: flex;
+    height: 30px;
     justify-content: flex-end;
-    padding: 5px 20px;
-    a {
-      font-size: 25px;
-      color: #FF3366;
+    margin-right: 5px;
+    .mypages-edit {
+      padding: 5px 0;
+      a {
+        font-size: 23px;
+      }
+    }
+    .mypages-destory{
+      padding: 5px 20px;
+      padding-bottom: 30px;
+      a {
+        font-size: 25px;
+        color: #FF3366;
+      }
     }
   }
 }
