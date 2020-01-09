@@ -84,8 +84,7 @@ gem "kaminari"
 gem 'bootstrap4-kaminari-views'
 gem 'quandl'
 gem 'dotenv-rails'
-gem 'omniauth'
-gem 'omniauth-facebook'
+
 
 
 
