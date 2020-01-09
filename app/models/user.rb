@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-        :recoverable, :rememberable, :validatable
+        :recoverable, :rememberable, :validatable, :omniauthable
   def self.search(params)
     results = all.order(created_at: :desc)
     results = results.where('good LIKE ?', "%#{params[:search]}%") if params[:search].present?
