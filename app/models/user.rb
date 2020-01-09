@@ -3,6 +3,25 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
           :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+  def self.find_for_oauth(auth)
+    uid = auth.uid
+    provider = auth.provider
+    user = User.where(uid: auth.uid, provider: auth.provider).first
+
+    unless user
+      user = User.create(
+        uid:        auth.uid,
+        provider:   auth.provider,
+        email:      User.dummy_email(auth),
+        password:   Devise.friendly_token[0, 20]
+      )
+    end
+  end
+
+  private
+  def self.dummy_email(auth)
+    "#{auth.uid}-#{auth.provider}@example.com"
+  end
 
   def self.search(params)
     results = all.order(created_at: :desc)
@@ -20,23 +39,4 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :nickname, presence: true, length: { maximum: 6 }
 
-  def self.find_for_oauth(auth)
-    uid = auth.uid
-    provider = auth.provider
-    user = User.where(uid: auth.uid, provider: auth.provider).first
-
-    unless user
-      user = User.create(
-        uid:        auth.uid,
-        provider:   auth.provider,
-        email:      User.dummy_email(auth),
-        password:   Devise.friendly_token[0, 20]
-      )
-    end
-  end
-
-  # private
-  # def self.dummy_email(auth)
-  #   "#{auth.uid}-#{auth.provider}@example.com"
-  # end
 end
