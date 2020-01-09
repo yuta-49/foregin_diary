@@ -4,10 +4,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
   def callback_from(provider)
     provider = provider.to_s
 
-    # userモデルに定義したfinde_for_oauthメソッドを使用
     @user = User.find_for_oauth(request.env['omniauth.auth'])
 
     if @user.persisted?
@@ -15,7 +15,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_and_redirect @user, event: :authentication
     else
       session["devise.#{provider}_data"] = request.env['omniauth.auth']
-      redirect_to new_user_registration_url
+      redirect_to root_path
     end
   end
 end

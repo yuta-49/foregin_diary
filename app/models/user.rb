@@ -24,14 +24,16 @@ class User < ApplicationRecord
     user = User.where(uid: auth.uid, provider: auth.provider).first
 
     unless user
-      user = User.new(
-        uid: auth.uid,
-        provider: auth.provider,
-        email: auth.info.email,
-        password: Devise.friendly_token[0, 20],
+      user = User.create(
+        uid:      auth.uid,
+        provider: auth.provider
       )
-      user.save(:validate => false)
     end
     user
+  end
+
+  private
+  def self.dummy_email(auth)
+    "#{auth.uid}-#{auth.provider}@example.com"
   end
 end
