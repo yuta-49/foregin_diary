@@ -24,6 +24,7 @@
       = f.password_field :password_confirmation, autocomplete: "new-password"
     .actions
       = f.submit "新規登録"
+    = link_to "facebook", user_facebook_omniauth_authorize_path
 
       
 
