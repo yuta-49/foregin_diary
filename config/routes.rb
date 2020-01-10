@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  # get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
-  # get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
+  get '/auth/:provider/callback',    to: 'users#create',       as: :auth_callback
+  get '/auth/failure',               to: 'users#auth_failure', as: :auth_failure
   
   root to: "messages#index"
   resources :messages, only: [:index, :new, :create, :show, :edit, :destroy, :update]
