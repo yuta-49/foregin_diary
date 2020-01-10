@@ -15,7 +15,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else #userがsaveされてないインスタンスの場合は
       session["devise.sns_id"] = sns_id
       @password = Devise.friendly_token[0,20]
-      render registration_sns_signup_index_path
+      redirect_to root_path
     end
   end
   
