@@ -23,8 +23,8 @@ class User < ApplicationRecord
 
 
   def self.find_for_oauth(auth)
+    binding.pry
     user = User.where(uid: auth.uid, provider: auth.provider).first
-
     unless user
       user = User.create(
         uid:      auth.uid,
