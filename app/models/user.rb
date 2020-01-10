@@ -30,17 +30,27 @@ class User < ApplicationRecord
     #Ouath認証先で取ってきた必要な情報を取り出す
     uid = auth.uid
     provider = auth.provider
-    user = User.where(uid: auth.uid, provider: auth.provider).first
+    snscredential = SnsCredential.where(uid: uid, provider: provider).first
 
     binding.pry
-    unless user
-      user = User.create(
-        nickname: auth.info.name,
-        email: auth.info.email
-      )
-    end
+    # snsの登録は終わっている状態(uid+Providerの情報がDBに存在するが、Userにあるかどうかは別問題)
+    if snscredential.present?
+      # SNSの登録内容に合致したユーザを調べる
+      user = User.where(id: snscredential.user_id).first
+      # もしこれが存在しない場合は
+      unless user.present?
+        # userインスタンスを新規に作成し、これらの名前とemailを流し込んであげる
+        user = User.new(
+          nickname: auth.info.name,
+          email: auth.info.email
+          )
+      end
+      sns = snscredential
+      #binding.pry
+      # ここで、「snscredential」インスタンスと、これに対応する「user」インスタンスが取得できた。
 
-    user
+    end
+    return { user: user , sns_id: sns.id }
   end
 
   private
