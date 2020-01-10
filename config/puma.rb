@@ -34,7 +34,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 plugin :tmp_restart
 
 #dev/test環境での認証鍵
-# ssl_bind "0.0.0.0", "3000", {
-#   cert: "config/certs/localhost.pem",
-#   key:  "config/certs/localhost-key.pem"
-# }
+ssl_bind "0.0.0.0", "3000", {
+  cert: "config/certs/localhost.pem",
+  key:  "config/certs/localhost-key.pem"
+}
