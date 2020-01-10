@@ -17,6 +17,7 @@ class User < ApplicationRecord
   has_many :months
   has_many :numbers
   has_many :calenders
+  has_one :sns_credential, dependent: :destroy
 
   validates :nickname, presence: true
   validates :email, presence: true
