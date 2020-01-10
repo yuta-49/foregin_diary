@@ -26,16 +26,19 @@ class User < ApplicationRecord
 
 
   def self.find_for_oauth(auth)
-    binding.pry
+    #Ouath認証先で取ってきた必要な情報を取り出す
+    uid = auth.uid
+    provider = auth.provider
     user = User.where(uid: auth.uid, provider: auth.provider).first
+
+    binding.pry
     unless user
       user = User.create(
-        uid:      auth.uid,
-        provider: auth.provider,
-        email:    auth.info.email,
-        password: Devise.friendly_token[0, 20]
+        nickname: auth.info.name,
+        email: auth.info.email
       )
     end
+
     user
   end
 
