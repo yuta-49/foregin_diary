@@ -15,4 +15,5 @@
         = f.label :remember_me
     .actions
       = f.submit "Log in"
+    = link_to "facebook", user_facebook_omniauth_authorize_path, method: :post
   = render "devise/shared/links"
