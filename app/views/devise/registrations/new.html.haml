@@ -25,6 +25,8 @@
     .actions
       = f.submit "新規登録"
 
+    %ul.signed-wrapper
+      = link_to "facebook", user_facebook_omniauth_authorize_path, method: :post
 
       
 
