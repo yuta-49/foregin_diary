@@ -35,4 +35,10 @@ class User < ApplicationRecord
     end
     user
   end
+
+  private
+
+  def self.dummy_email(auth)
+    "#{auth.uid}-#{auth.provider}@example.com"
+  end
 end

@@ -86,6 +86,7 @@ gem 'quandl'
 gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-rails_csrf_protection'
 
 
 
