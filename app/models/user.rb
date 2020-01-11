@@ -46,7 +46,6 @@ class User < ApplicationRecord
           )
       end
       sns = snscredential
-      #binding.pry
       
     else #もし、SNSの登録が終わってない場合（OAuth認証をしたことがない場合）
       # OAuth認証先のemailに対応するユーザが存在しているか（＝登録済みのemailであるか否か）

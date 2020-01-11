@@ -22,7 +22,7 @@ em {
 }
 
 .signed-up {
-  height: 800px;
+  height: 1000px;
   width: 550px;
   margin: 0 auto;
   padding-top: 30px;
@@ -36,6 +36,42 @@ em {
   ul {
     li {
       color: red;
+    }
+  }
+}
+
+.signed-wrapper {
+  margin-left: 25px;
+  margin-top: 50px;
+  color: white;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+  .facebook {
+    position: relative;
+    border-radius: 4px;
+    margin: 16px 0 0;
+    background: #385185;
+    color: #fff;
+    a {
+      color: white;
+    }
+  }
+  .google {
+    position: relative;
+    border-radius: 4px;
+    margin: 16px 0 0;
+    background: #fff no-repeat 3px top;
+    border: #979797 solid 1px;
+    color: #333;
+    a {
+      color: #333;
     }
   }
 }
