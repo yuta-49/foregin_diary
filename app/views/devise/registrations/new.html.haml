@@ -4,7 +4,6 @@
     = render "devise/shared/error_messages", resource: resource
     .field
       = f.label :nickname
-      %em (6 characters maximum)
       %br/
       = f.text_field :nickname, autofocus: true, maxlength: "6"
     .field
@@ -26,7 +25,12 @@
       = f.submit "新規登録"
 
     %ul.signed-wrapper
-      = link_to "facebook", user_facebook_omniauth_authorize_path, method: :post
+      %li.facebook
+        = link_to "facebookで登録する", user_facebook_omniauth_authorize_path, method: :post
+      %li.google
+        = link_to "googleで登録する", user_google_oauth2_omniauth_authorize_path, method: :post
+
+
 
       
 

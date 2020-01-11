@@ -2,8 +2,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-          :recoverable, :rememberable, :trackable, :validatable, 
-          :omniauthable, :omniauth_providers => [:facebook]
+          :recoverable, :rememberable, :validatable, 
+          :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
 
 
@@ -46,7 +46,6 @@ class User < ApplicationRecord
           )
       end
       sns = snscredential
-      #binding.pry
       
     else #もし、SNSの登録が終わってない場合（OAuth認証をしたことがない場合）
       # OAuth認証先のemailに対応するユーザが存在しているか（＝登録済みのemailであるか否か）
