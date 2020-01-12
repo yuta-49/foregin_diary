@@ -16,7 +16,7 @@
   
 
   2.新規登録画面です。
-  <img width="1440" alt="スクリーンショット 2019-12-08 17 57 15" src="https://user-images.githubusercontent.com/56015345/70387109-39222b80-19e4-11ea-8b5e-8bd5a8bf2092.png">
+  <img width="1420" alt="スクリーンショット 2020-01-12 22 17 27" src="https://user-images.githubusercontent.com/56015345/72219435-6df84400-3589-11ea-99bf-b69d8a038a1c.png">
 
 
   3.その月の番号をクリックすると日記の入力フォームに進み、アイコンをクリックするとカレンダー画面に進むことができます。
