@@ -156,6 +156,12 @@ body {
     flex:1;
     display: flex;
     color: white;
+    .top-page {
+      margin-top: 25px;
+      a {
+        color: white;
+      }
+    }
     .header-diary {
       display: block;
       margin-top: 12px;
