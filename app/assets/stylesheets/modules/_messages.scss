@@ -21,7 +21,6 @@ body {
 
 .wrapper {
   box-sizing: border-box;
-  background-image: url('https://cdn.pixabay.com/photo/2016/11/23/15/23/cosmos-1853491_1280.jpg');
 }
 
 .fa {
@@ -157,7 +156,8 @@ body {
     display: flex;
     color: white;
     .top-page {
-      margin-top: 25px;
+      margin-top: 20px;
+      font-size: 20px;
       a {
         color: white;
       }
@@ -232,3 +232,27 @@ body {
   width: 100%;
 }
 
+.mianpage-continer  {
+  padding-left: 40px;
+  .sliders {
+    margin: 0 auto;
+    width: 850px;
+    height: 400px;
+    .twiiter-slick {
+      background-image: url("https://pics.prcm.jp/2941f6210307b/82890477/jpeg/82890477.jpeg");
+      width: 850px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mercari-slick {
+      background-image: url("https://d1f5hsy4d47upe.cloudfront.net/a2/a296236b2068e0b8bcbed76730446362_t.jpeg");
+      width: 850px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
