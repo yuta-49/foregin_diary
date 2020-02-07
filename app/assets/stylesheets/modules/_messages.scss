@@ -236,23 +236,23 @@ body {
   padding-left: 40px;
   .sliders {
     margin: 0 auto;
-    width: 850px;
     height: 400px;
+    background-image: url("IMG_0356.JPG");
     .twiiter-slick {
-      background-image: url("https://pics.prcm.jp/2941f6210307b/82890477/jpeg/82890477.jpeg");
       width: 850px;
       height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    .mercari-slick {
-      background-image: url("https://d1f5hsy4d47upe.cloudfront.net/a2/a296236b2068e0b8bcbed76730446362_t.jpeg");
-      width: 850px;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding-left: 50px;
+      .twitter {
+        font-size: 40px;
+        // margin-left: 50px;
+      }
+      h1 {
+        color: white;
+        margin-left: 20px;
+      }
     }
   }
 }
