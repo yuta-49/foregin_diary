@@ -12,7 +12,11 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(new_params)
     @message.save
-    redirect_to root_path
+    if
+      redirect_to user_path(current_user)
+    else
+      render :new
+    end
   end
       
   def show
