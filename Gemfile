@@ -73,7 +73,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
-gem 'chartkick', '~> 3.2', '>= 3.2.1'
+gem 'chartkick', '~> 3.4'
 gem 'jquery-rails'
 gem 'fullcalendar-rails' 
 gem 'momentjs-rails'
